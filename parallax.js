@@ -11,6 +11,16 @@ function parallax(){
         
     });
 
+    $('.sea').css({
+
+        'transform' :  'translate( 0px, '+  wscr/20+ 'rem)'
+        
+    });
+    $('.sea2').css({
+
+        'transform' :  'translate( 0px, '+  wscr/20+ '%)'
+        
+    });
   
     
    
@@ -29,5 +39,32 @@ function parallax(){
         $('.game').addClass('.go');
 }
 
+if(wscr > $('.game').offset().top /*-( $(window).height() /1.5 )*/){
+        
+
+    $('.mariooff').addClass('mario');
+    if(wscr > $('.mario').offset().top /*-( $(window).height() /1.5 )*/){
+        
+        
+    
+        $('.nfsoff').addClass('nfs');
+        /*if(wscr > ($('.section-game').offset().top -( $(window).height()*1.2 ))){
+            console.log('hi')
+            $('.section-game').addClass('section-game-off'); 
+        }*/
+    }
+}
+
+if(wscr > $('.zara').offset().top /*-( $(window).height() /1.5 )*/){
+
+    
+    $('.zara').css({
+
+        'transform' :  'translate(-' +  Math.abs( wscr/300)+  'rem, 0rem)'
+        
+    });
+
+
+    }   
 
 }
