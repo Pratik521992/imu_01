@@ -31,9 +31,10 @@ function parallax(){
         
         
     });*/
-    if(wscr > $('.pig3').offset().top /*-( $(window).height() /1.5 )*/){
+    if(wscr > $('.pig3-off').offset().top -( $(window).height() /3.5 )){
         
         $('.pig3text').addClass('is-showing');
+        $('.pig3-off').addClass('pig3');
     }
     if(wscr > $('.section-game').offset().top /*-( $(window).height() /1.5 )*/){
         $('.game').addClass('.go');
